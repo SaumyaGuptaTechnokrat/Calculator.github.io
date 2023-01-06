@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="icons8-calculate-16.png">
+
+    <style>
+        .display{
+            display: none;
+        }
+        body{
+            background:#0d75f8;
+            padding: 10px;
+            margin: 10px;
+        }
+        #res,#res2,#unitconve{
+            color: white;
+            text-align: center;
+        }
+        div{
+            display: grid;
+            justify-content: center;
+            grid-gap: 5px 2px;
+            grid-template-columns: 100px 150px;
+        }
+        #unitconve{
+            text-decoration: underline;
+        }
+        label{
+            color: white;
+        }
+        button{
+            
+            display: grid;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <marquee behaviour="alternate" scrollamount="15" direction="right" >
+        <h1 id="unitconve">UNIT CONVERSION</h1></marquee>
+    
+    <form>
+        <div>
+            <label>Write Number:</label>
+        <input id="dataFrom" type="number" required>
+        <label>Unit From:</label><select  id="unitsfrom">
+            <option name="unitsFrom" value="Kilometer">Kilometer</option>
+            <option name="unitsFrom" value="Meter">Meter</option>
+            <option name="unitsFrom" value="Centimeter">Centimeter</option>
+            <option name="unitsFrom" value="Millimeter">Millimeter</option>
+        </select>
+        <label>Unit To:</label><select id="unitTo">
+            <option name="unitTo" value="Kilometer">Kilometer</option>
+            <option name="unitTo" value="Meter">Meter</option>
+            <option name="unitTo" value="Centimeter">Centimeter</option>
+            <option name="unitTo" value="Millimeter">Millimeter</option>
+        </select>
+        <br>
+    
+        </div>
+    
+    </form>    
+    
+    <button id="Convert" onclick="convert()">Convert</button>
+
+    <h1 id="res">Results</h1>
+    <h1 id="res2" class="display"></h1>
+    <script>
+        function convert(){
+            let mfrom = document.getElementsByName("unitsFrom")[2];
+            var inputfrom = parseFloat(document.getElementById("dataFrom").value);
+
+            var results=document.getElementById("res");
+
+            var selectElementFrom=document.querySelector("#unitsfrom").value;
+            var selectElementTo = document.querySelector("#unitTo").value;
+
+            document.querySelector("#res").textContent=selectElementFrom;
+            document.querySelector("#res2").textContent=selectElementTo;
+            var res2=document.querySelector("#res2").textContent;
+            var res = document.querySelector("#res").textContent;
+            /*if(mfrom.selected==true){
+                results.innerHTML=mtoCentimeter(inputfrom) +"Centimeter";
+            }*/
+            if(res=='Meter' && res2=='Centimeter'){
+                results.innerHTML = inputfrom + selectElementFrom + "="+ inputfrom*100+selectElementTo;
+            }
+            else if(res=='Centimeter' && res2=='Meter'){
+                results.innerHTML = inputfrom + selectElementFrom + "="+ (inputfrom/100)+selectElementTo;
+            }
+            else if(res=='Meter' && res2=='Millimeter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom*100*10) + selectElementTo;
+            }
+            
+            else if(res=='Millimeter' && res2=='Meter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom/(100*10)) + selectElementTo;
+            }
+            
+            else if(res=='Centimeter' && res2=='Millimeter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom*10) + selectElementTo;
+            }
+            
+            else if(res=='Millimeter' && res2=='Centimeter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom/10) + selectElementTo;
+            }
+            else if(res=='Kilometer' && res2=='Meter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom*1000) + selectElementTo;
+            }
+            else if(res=='Meter' && res2=='Kilometer'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom/1000) + selectElementTo;
+            }
+            else if(res=='Kilometer' && res2=='Centimeter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom*1000*100) + selectElementTo;
+            }
+            else if(res=='Centimeter' && res2=='Kilometer'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom/(1000*100)) + selectElementTo;
+            }
+            
+            else if(res=='Kilometer' && res2=='Millimeter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom*1000*100*10) + selectElementTo;
+            }
+            
+            else if(res=='Millimeter' && res2=='Kilometer'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom/(1000*100*10)) + selectElementTo;
+            }
+            else if(res=='Kilometer' && res2=='Kilometer'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + (inputfrom) + selectElementTo;
+            }
+            
+            if(res=='Meter' && res2=='Meter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + inputfrom+ selectElementTo;
+            }
+            if(res=='Centimeter' && res2=='Centimeter'){
+                results.innerHTML = inputfrom + selectElementFrom + "=" + inputfrom+ selectElementTo;
+            }
+        }
+    </script>
+</body>
+</html>

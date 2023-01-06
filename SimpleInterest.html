@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="icons8-calculate-16.png">
+
+    <style>
+        #content{
+            display: grid;
+            grid-template-columns: 200px 50px;
+            margin: auto;
+        }
+        #boxes{
+            display: inline;
+            margin: auto;
+        }
+        body{
+            margin: 100px;
+            padding: 150px;
+            background-image: url("https://fthmb.tqn.com/c2tbQLPdHI_prrKyuWMyHAuoykc=/2124x1412/filters:fill(auto,1)/GettyImages-140671550-57a8bf345f9b58974a4bea09.jpg");
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxes">
+        <label>Principal Amount</label>
+        <input type="number" id="principal" required>
+        <label>Rate Of Interest</label>
+        <input type="number" id="rate">
+        <label>Time</label>
+        <input type="number" id="time" onkeyup="simpleInterest(this.value)"><label>(in Years)</label>
+    </div>
+    <div id="content">
+        <h1 >Total Interest</h1>
+        <h2 id="totinterest"></h2>
+        <h1 >Total Amount</h1>
+        <h2 id="totamt"></h2>
+    </div>
+    <script>
+        function simpleInterest(){
+            var princi = parseFloat(document.getElementById('principal').value);
+            var rate = parseFloat(document.getElementById('rate').value);
+            var time = parseFloat(document.getElementById('time').value);
+            var Interest = parseFloat(princi*(rate/100)*time);
+            var Amount = princi + Interest;
+            document.getElementById('totinterest').innerText=Interest;
+            document.getElementById('totamt').innerText=Amount;            
+        }
+    </script>
+</body>
+</html>
