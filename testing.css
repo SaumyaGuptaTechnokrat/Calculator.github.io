@@ -21,9 +21,9 @@
             height: 100px;
             margin: auto;
             color: white;
-            background:black;
+            background:grey
             padding: 5px;
-            
+            font-family:digital-clock-font;
         }
         #head1:hover{
                     color:yellow;
@@ -31,9 +31,10 @@
         #inputtext{
             height: 100px;
             width: 400px;
-            background:black;   
+            background:grey;   
             font-size: 40px;
             color: white;
+            font-family:digital-clock-font;
         }
         .btn{
             border-radius: 35%;
