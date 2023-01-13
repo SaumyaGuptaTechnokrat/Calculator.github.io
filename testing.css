@@ -2,43 +2,73 @@
             padding: 10px;
             margin: 0;
             background-image:url("https://plus.unsplash.com/premium_photo-1661382019197-94d5edb38186?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+            background-repeat: no-repeat;
+            background-size: 1600px 1000px;
         }
         #gridi{
             display: grid;
-            grid-template-columns: 80px 80px 80px 80px 80px;
-            width:100%;
+            grid-template-columns: 75px 75px 75px 75px 75px;
+            grid-gap:5px;
             height: 400px;
-            width: 403px;
+            width: 410px;
             margin: auto;
-            border: 2px solid black;
-            background:black;  
+            border: 2px solid gray;
+            border-radius: 10%;
+            background:gray;  
+            justify-content: space-evenly;
+            justify-content: center;
         }
 
         #head1{
             text-align:center;
-            border: 1px black solid;
+            border: 1px gray solid;
+            border-radius: 10%;
             width: 395px;
             height: 100px;
             margin: auto;
             color: white;
-            background:grey;
+            background:gray;
             padding: 5px;
-            font-family:digital-clock-font;
+            font-family: monospace;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         #head1:hover{
-                    color:yellow;
+            color: yellow;
         }
         #inputtext{
             height: 100px;
             width: 400px;
-            background:grey;   
+            background:gray;  
+            border: 1px gray solid;
+ 
             font-size: 40px;
             color: white;
-            font-family:digital-clock-font;
+            /*hsl(202, 11%, 29%);*/
+            font-family: monospace;
+            border-radius: 10%;
+
         }
         .btn{
-            border-radius: 35%;
+            border-radius: 15%;
+
             font-size: 30px;
+            background-color: black;
+            color: white;
+            border: 1px white solid;
+        }
+        /*#plus{
+            height: 200px;
+        }
+        #one,#two,#three,#four{
+            height: 50px;
+        }*/
+        .btn1{
+            font-size: 30px;
+            background-color: black;
+            color: white;
         }
         #InputBoxforCal{
             display: grid;
@@ -46,17 +76,17 @@
             grid-gap: 5px;
             margin: auto;
             justify-content: center;
+            position: relative;
+            left: -30px;
+        }
+        #nav{
+            width: 400px;
         }
         #left{
             float:left;
         }
         #right{
             float: center;
-        }
-        .btn1{
-            border-radius: 35%;
-            font-size: 30px;
-
         }
         .btn:hover{
             color: orange;
@@ -65,7 +95,26 @@
         .btn1:hover{
             color: orange;
             background-color: cornflowerblue;
+
         }
+        
+        .btn-brack,.btn-power{
+                background-color: black;
+                color: white;
+                border: 1px white solid;
+                border-radius: 15%;
+                font-size: 30px;
+            }
+            .btn-power:hover{
+                color: orange;
+                background-color: cornflowerblue;
+            
+            }
+            .btn-brack:hover{
+                color: orange;
+                background-color: cornflowerblue;
+            
+            }
         @media screen and (min-width:180px) and (max-width:700px) {
             #left{
                 float: right;
@@ -82,13 +131,9 @@
                 font-size: smaller;
             }
             #InputBoxforCal{
-               
                 grid-template-columns: 105px 250px;
                 align-items: center;
-                position: relative;
-                top: 110px;
-                right: 100px;
-                justify-content:center;
+                float: left;
             }
             #wc{
                 font-size: x-small;
@@ -99,18 +144,35 @@
             #gridi{
                 width: 250px;
                 height: 250px;
-                grid-template-columns: 50px 50px 50px 50px 50px ;
+                grid-template-columns: 45px 45px 45px 45px 45px ;
             }
-            .btn,.btn1{
+            .btn{
                 font-size: 15px;
             }
             #inputtext{
-                width: 250px;
-                font-size: 20px;
+                width: 247px;
+                font-size: 25px;
                 color: white;
             }
             #head1{
-                width: 245px;
+                width: 240px;
+                font-size: 25px;
+            }
+            #nav{
+                width: 200px;
+            }
+            .btn1{
+                height: 45px;
+                border: 1px white solid;
+                border-radius: 15%;
+            }
+            .btn-brack,.btn-power{
+                height: 45px;
+                background-color: black;
+                color: white;
+                border: 1px white solid;
+                border-radius: 15%;
+                font-size: 15px;
             }
         }
         @media screen and (min-width:701px) and (max-width:1000px){
