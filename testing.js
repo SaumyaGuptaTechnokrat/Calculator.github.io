@@ -1,25 +1,25 @@
 
 function one(){
-    var one = document.getElementById('1').innerHTML;
+    var one = document.getElementById('one').innerHTML;
     document.getElementById("inputtext").value +=1;
 }
 function two(){
-    var two = document.getElementById('2').innerHTML;
+    var two = document.getElementById('two').innerHTML;
     document.getElementById("inputtext").value += 2;
 }
 function plus(){
     
-    var plus = document.getElementById('+').innerHTML;
+    var plus = document.getElementById('plus').innerHTML;
     document.getElementById("inputtext").value += plus;
 }
 function three(){
     
-    var three = document.getElementById('3').innerHTML;
+    var three = document.getElementById('three').innerHTML;
     document.getElementById("inputtext").value += three;
 }
 function four(){
     
-    var four = document.getElementById('4').innerHTML;
+    var four = document.getElementById('four').innerHTML;
     document.getElementById("inputtext").value += four;
 }
 function five(){
@@ -90,3 +90,6 @@ function del() {
     var input = document.getElementsByName("Input")[0];
     input.value = input.value.substring(0, input.value.length - 1);
   }
+function inputbox(){
+    document.getElementById('inputtext').style.color=white;
+}
