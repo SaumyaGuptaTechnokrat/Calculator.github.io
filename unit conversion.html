@@ -37,13 +37,20 @@
             display: grid;
             margin: auto;
         }
+        #anchortags{
+            float: left;
+        }
+        #anchor{
+            color: white;
+
+        }
     </style>
 </head>
 <body>
     <marquee behaviour="alternate" scrollamount="15" direction="right" >
         <h1 id="unitconve">UNIT CONVERSION</h1></marquee>
-    
-    <form>
+    <div id="anchortags"><a id="anchor" href="SimpleInterest.html">SIMPLEINTEREST</a><br><a id="anchor" href="index.html">CALCULATOR</a></div>
+    <form id="form">
         <div>
             <label>Write Number:</label>
         <input id="dataFrom" type="number" required>
