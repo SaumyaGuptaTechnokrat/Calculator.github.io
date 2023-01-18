@@ -108,6 +108,9 @@
                 border: 1px white solid;
                 border-radius: 15%;
                 font-size: 30px;
+                    
+            cursor:pointer;
+            text-decoration-line:none;
             }
             .btn-power:hover{
                 color: orange;
