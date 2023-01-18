@@ -14,9 +14,10 @@
     
     <div >
         <div id="left">
-        <a href="unit conversion.html" ><u>UNIT CONVERSION</u></a>
+        <abbr title="Convert Units like:- kilometer to meter centimeter to meter or kilometer, etc"><a href="unit conversion.html" ><u>UNIT CONVERSION</u></a>
+            </abbr>
         <br>
-        <a href="SimpleInterest.html" ><u>SIMPLE INTEREST</u></a>
+            <abbr title="Simple interest is the interest amount for a particular principal amount of money at some rate of interest" ><a href="SimpleInterest.html" ><u>SIMPLE INTEREST</u></a></abbr>
         </div>
         <div  id="right">
             <h1 id="head0" style="text-align: center;color:teal;text-decoration:underline;">BASIC <font color = "red">CALCULATOR</font></h1>
@@ -25,7 +26,7 @@
     <div id="InputBoxforCal">
                 
                 <div id="wc">WRITE CALCULATION:</div>
-                <div><input type="text" id="inputtext" class="inputbox" name="Input"></div>
+                <div><abbr title="Write Calculation in this box"><input type="text" id="inputtext" class="inputbox" name="Input"></abbr></div>
             
             <br>
             <div id="nav">
@@ -53,11 +54,11 @@
 
                 <button class="btn-brack" id="(" onclick="bracketl()">(</button>
                 <button class="btn-brack" id=")" onclick="bracketr()">)</button>
-                <button class="btn-brack" id="clear" onclick="document.getElementById('inputtext').value = '';document.getElementById('head1').innerText = '';">AC</button>
+                <abbr title="ALL CLEAR at one go"><button class="btn-brack" id="clear" onclick="document.getElementById('inputtext').value = '';document.getElementById('head1').innerText = '';">AC</button></abbr>
                 <button style="border-radius: 25%;font-size: 30px;" class = "btn1" onclick="getResults()">=</button>
-                <button class="btn-power" onclick="doubleinto()">x^n</button>
+                <abbr title="Number to the power n; n is any real number used for power"><button class="btn-power" onclick="doubleinto()">x^n</button></abbr>
                 <button class="btn" id="%" onclick="percent()">%</button>
-                <button type="button" class="btn" onclick="del()">C</button>
+                <abbr title="Clear or delete the text one by one"><button type="button" class="btn" onclick="del()">C</button></abbr>
 
             </div>
     </div>
