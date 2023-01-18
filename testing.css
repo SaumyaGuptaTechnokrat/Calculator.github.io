@@ -43,7 +43,7 @@
             width: 400px;
             background:gray;  
             border: 1px gray solid;
- 
+            cursor:text;
             font-size: 40px;
             color: white;
             /*hsl(202, 11%, 29%);*/
@@ -88,6 +88,10 @@
         #right{
             float: center;
         }
+         .btn,.btn1{
+            cursor:pointer;
+            text-decoration-line:none;
+         }
         .btn:hover{
             color: orange;
             background-color: cornflowerblue;
