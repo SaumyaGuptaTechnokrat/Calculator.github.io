@@ -1,6 +1,7 @@
-.body{
+
+        .body{
             padding: 10px;
-            margin: 0px;
+            margin: 0;
             background-image:url("https://plus.unsplash.com/premium_photo-1661382019197-94d5edb38186?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
             background-repeat: no-repeat;
             background-size: 1600px 1000px;
@@ -10,13 +11,14 @@
             grid-template-columns: 75px 75px 75px 75px 75px;
             grid-gap:5px;
             height: 400px;
-            width: 410px;
+            width: 403px;
             margin: auto;
             border: 2px solid gray;
-            border-radius: 10%;
+            border-radius: 1%;
             background:gray;  
             justify-content: space-evenly;
             justify-content: center;
+            
         }
 
         #head1{
@@ -43,7 +45,7 @@
             width: 400px;
             background:gray;  
             border: 1px gray solid;
-            cursor:text;
+ 
             font-size: 40px;
             color: white;
             /*hsl(202, 11%, 29%);*/
@@ -53,11 +55,14 @@
         }
         .btn{
             border-radius: 15%;
-
+            cursor:pointer; 
+            transition: all 0.2s ease;
+            transform: translateY(2px);
             font-size: 30px;
             background-color: black;
             color: white;
             border: 1px white solid;
+
         }
         /*#plus{
             height: 200px;
@@ -88,40 +93,10 @@
         #right{
             float: center;
         }
-         .btn,.btn1{
-            cursor:pointer;
-            text-decoration-line:none;
-         }
         .btn:hover{
             color: orange;
             background-color: cornflowerblue;
         }
-        .btn1:hover{
-            color: orange;
-            background-color: cornflowerblue;
-
-        }
-        
-        .btn-brack,.btn-power{
-                background-color: black;
-                color: white;
-                border: 1px white solid;
-                border-radius: 15%;
-                font-size: 30px;
-                    
-            cursor:pointer;
-            text-decoration-line:none;
-            }
-            .btn-power:hover{
-                color: orange;
-                background-color: cornflowerblue;
-            
-            }
-            .btn-brack:hover{
-                color: orange;
-                background-color: cornflowerblue;
-            
-            }
         @media screen and (min-width:180px) and (max-width:700px) {
             #left{
                 float: right;
@@ -167,19 +142,6 @@
             }
             #nav{
                 width: 200px;
-            }
-            .btn1{
-                height: 45px;
-                border: 1px white solid;
-                border-radius: 15%;
-            }
-            .btn-brack,.btn-power{
-                height: 45px;
-                background-color: black;
-                color: white;
-                border: 1px white solid;
-                border-radius: 15%;
-                font-size: 15px;
             }
         }
         @media screen and (min-width:701px) and (max-width:1000px){
